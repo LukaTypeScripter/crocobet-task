@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
+  
+
+  
+  @media (min-width: 1023px) {
+    .container {
+      width: 80%;
+      padding-left: 240px;
+      padding-top: 100px;
+    }
+  }
+  
+  /* Style the card */
+  .card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 260px;
+    height: 320px;
+  }
+  
+  /* Style the text description */
+  .description {
+    font-weight: bold;
+    color: #007bff; /* You can use any color you prefer */
+  }
