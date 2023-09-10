@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-details.component.css'],
 })
 export class UserDetailsComponent implements OnInit {
-  user: any; // Add the 'user' property here
+  user: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,13 +25,9 @@ export class UserDetailsComponent implements OnInit {
     if (userIdParam !== null) {
       const userId = +userIdParam;
       if (!isNaN(userId)) {
-        // Fetch the user's details based on the user ID
         this.dataService.getUsers().subscribe((users) => {
-          // Find the user with the matching ID
           const user = users.find((u) => u.id === userId);
-  
           if (user) {
-            // Assign the user data to a property in your component
             this.user = user;
           } else {
             console.error('User not found.');

@@ -1,29 +1,41 @@
+<h1 class="title">მომხმარებლები</h1>
+<p class="subtitle">
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+  when an unknown printer took a galley of type and scrambled it to make a type
+  specimen book. It has survived not only five centuries, but also the leap into
+  electronic typesetting, remaining <span class="yellow">essentially unchanged</span>. It was popularised in
+  the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+  and more recently with desktop publishing software like Aldus PageMaker
+  including versions of Lorem Ipsum.
+</p>
+
 <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Details</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let user of users; let i = index">
-        <td>{{ user.name }}</td>
-        <td>{{ user.email }}</td>
-        <td>
-          <button
+  <thead>
+    <tr>
+      <th>სახელი</th>
+      <th>მეილი</th>
+      <th>დეტალები</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users; let i = index">
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>
+        <button
           (mouseover)="setButtonState(i, 'hovered')"
           (mouseleave)="setButtonState(i, 'normal')"
           [@buttonAnimation]="buttonStates[i]"
           (click)="navigateToDetails(user.id)"
-         class="button"
-          >
+          class="button"
+        >
           ინფორმაცია
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <main>
-    <router-outlet></router-outlet>
-  </main>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<main>
+  <router-outlet></router-outlet>
+</main>

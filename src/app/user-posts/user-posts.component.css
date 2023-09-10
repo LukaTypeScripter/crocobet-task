@@ -18,14 +18,28 @@
   
   /* Style the card */
   .card {
-    border: 1px solid #ccc;
     padding: 20px;
     margin: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 260px;
     height: 320px;
+    background-color: #EFECFF;
+    border-radius: 27px
   }
-  
+  .card__title {
+    color: #032D60;
+    font-size: 24px;
+font-weight: 500;
+line-height: 21px;
+word-wrap: break-word
+  }
+  .card__body {
+    color: #032D60;
+font-size: 16px;
+font-weight: 400;
+line-height: 25.50px;
+word-wrap: break-word
+  }
   /* Style the text description */
   .description {
     font-weight: bold;

@@ -1,9 +1,9 @@
 <div class="container">
     <div class="card" *ngFor="let post of posts">
       <div class="card-info">
-      <h2>{{ post.title }}</h2>
+      <h2 class="card__title">{{ post.title }}</h2>
     
-        <p>{{ post.body | slice:0:50 }}<span class="bold-text">{{ post.body | slice:50 }}</span></p>
+        <p class="card__body">{{ post.body | slice:0:50 }}<span class="bold-text">{{ post.body | slice:50 }}</span></p>
   
       </div>
     </div>

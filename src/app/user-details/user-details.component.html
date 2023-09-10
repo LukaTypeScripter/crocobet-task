@@ -1,29 +1,26 @@
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>geo lat</th>
-      <th>zipcode</th>
-      <th>city</th>
-      <th>street</th>
-      <th>posts</th>
-    </tr>
-  </thead>
-  <tbody class="card" *ngIf="user">
-    <tr>
-    <td>{{ user.name }}</td>
-    <td> {{ user.email }}</td>
-    <td> {{ user.address.geo.lat }}, {{ user.address.geo.lng }}</td>
-    <td>{{ user.address.zitdcode }}</td>
-    <td>{{ user.address.city }}</td>
-    <td> {{ user.address.street }}</td>
-    <button (click)="navigateToPosts()" class="button">View Posts</button>
-  </tr>
 
-  </tbody>
+
+  <div class="card" *ngIf="user">
+    <div class="card__inside">
+      <h1>user details</h1>
+
+    <p><span>name:</span>{{ user.name }}</p>
+    <p><span>email:</span> {{ user.email }}</p>
+    <p><span>location:</span> {{ user.address.geo.lat ?user.address.geo.lat : "" }}, {{ user.address.geo.lng }}</p>
+    <p><span>zipcode:</span> {{ user.address.zipcode  ? user.address.zipcode  : ""}}</p>
+    <p><span>city:</span> {{ user.address.city ? user.address.city : "" }}</p>
+    <p><span>street:</span> {{ user.address.street ? user.address.street : "" }}</p>
+    <p><span>suite:</span> {{ user.address.suite ? user.address.suite : ""}}</p>
+    <p><span>comapny name:</span> {{ user.company.name? user.company.name : ""}}</p>
+    <p><span>company catchprase:</span> {{ user.company.catchPhrase? user.company.name : ""}}</p>
+    <p><span>website:</span> {{ user.website? user.address.suite : ""}}</p>
+    <p><span>phone:</span> {{ user.phone? user.phone: ""}}</p>
+    <button (click)="navigateToPosts()" class="button">View Posts</button>
+  </div>
+
+  </div>
   
-</table>
+
 
 <router-outlet></router-outlet>
